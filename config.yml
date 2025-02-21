@@ -1,0 +1,8 @@
+app:
+  name: 'Ayan test project'
+  version: '1.0.0'
+
+postgres:
+  url: 'postgres://postgres:root@localhost:5432/ayan'
+  poolMax: 20
+  connAttempts: 5

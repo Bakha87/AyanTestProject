@@ -6,10 +6,6 @@ import (
 	"context"
 )
 
-const (
-	timeout = 3
-)
-
 type Repository interface {
 	PutEventNotification(ctx context.Context, req *model.Event) error
 }

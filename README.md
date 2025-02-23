@@ -1,3 +1,39 @@
+# Project Setup Guide
+
+## 1. Clone the Repository
+To run the application, you need to download the source code from the GitHub repository:
+
+## 2. Start the Application with Docker Compose
+Run the following command to build and start the application:
+```sh
+docker-compose up --build
+```
+
+## 3. Send a Test Request
+You can use `curl` to send a test request to the API:
+```sh
+curl --location 'http://localhost:8080/api/v1/card/notification' \
+--header 'Content-Type: application/json' \
+--data '{
+  "orderType": "SendOtp",
+  "sessionId": "500cf308-e666-4639-aa9f-f6376015d1b4",
+  "card": "4433**1409",
+  "eventDate": "2023-04-06 22:52:34.930150 +00:00",
+  "websiteUrl": "https://somon.tj"
+}'
+```
+
+## 4. Check Worker Logs
+To monitor the worker logs, run the following command:
+```sh
+docker-compose logs --follow
+```
+
+This will display real-time logs of the running services.
+
+
+
+
 Backend developer test
 =================
 
